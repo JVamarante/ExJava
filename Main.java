@@ -9,14 +9,14 @@ public class Main {
 
         boolean adicionarMaisPessoas = true;
         while (adicionarMaisPessoas) {
-            PessoaFisica pessoaFisica = new PessoaFisica(); // Criando uma nova instância em cada iteração
+            PessoaFisica pessoaFisica = new PessoaFisica();
 
             System.out.println("Digite o nome da pessoa física:");
             pessoaFisica.setNome(scanner.next());
             System.out.println("Digite a idade da pessoa física:");
             pessoaFisica.setIdade(scanner.nextInt());
 
-            cp.cadastrarPessoaFisica(pessoaFisica); // Corrigido o método chamado
+            cp.cadastrarPessoaFisica(pessoaFisica);
             System.out.println(pessoaFisica.toString());
 
             System.out.println("Deseja adicionar outra pessoa? (Sim/Não)");
