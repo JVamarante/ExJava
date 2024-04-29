@@ -11,6 +11,6 @@ class PessoaJuridica extends Pessoa {
 
     @Override
     public String toString() {
-        return "Nome:" + getNome() + ", idade:" + getIdade() + ", Tipo: Pessoa Jurídica, CNPJ: " + getCnpj();
+        return "Nome: " + getNome() + ", Idade: " + getIdade() + ", CNPJ: " + getCnpj() + ", Tipo: Pessoa Jurídica";
     }
 }

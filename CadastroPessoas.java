@@ -13,12 +13,6 @@ public class CadastroPessoas {
         System.out.println("Pessoa jurídica cadastrada com sucesso!");
     }
 
-    public void listarFisica() {
-        for (PessoaFisica pf : pessoasFisicas) {
-            System.out.println(pf);
-        }
-    }
-
     public void listarPolimorficos() {
         ArrayList<Pessoa> pessoasPolimorficas = new ArrayList<>();
         pessoasPolimorficas.addAll(pessoasFisicas);
