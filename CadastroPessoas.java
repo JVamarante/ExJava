@@ -1,32 +1,21 @@
 import java.util.ArrayList;
-public class CadastroPessoas {
-    private ArrayList<PessoaFisica> pessoasFisicas = new ArrayList<>();
-    private ArrayList<PessoaJuridica> pessoasJuridicas = new ArrayList<>();
+class CadastroPessoas {
+    private ArrayList<Pessoa> pessoas = new ArrayList<>();
 
-    public void cadastrarPessoaFisica(PessoaFisica pf) {
-        pessoasFisicas.add(pf);
-        System.out.println("Pessoa física cadastrada com sucesso!");
-    }
-
-    public void cadastrarPessoaJuridica(PessoaJuridica pj) {
-        pessoasJuridicas.add(pj);
-        System.out.println("Pessoa jurídica cadastrada com sucesso!");
+    public void cadastrarPessoa(Pessoa pessoa) {
+        pessoas.add(pessoa);
+        System.out.println("Pessoa cadastrada com sucesso!");
     }
 
     public void listarPolimorficos() {
-        ArrayList<Pessoa> pessoasPolimorficas = new ArrayList<>();
-        pessoasPolimorficas.addAll(pessoasFisicas);
-        pessoasPolimorficas.addAll(pessoasJuridicas);
-
-        for (Pessoa p : pessoasPolimorficas) {
+        for (Pessoa p : pessoas) {
             if (p instanceof PessoaFisica) {
-                System.out.println("Nome:" + p.getNome() + ", Idade:" + p.getIdade() + ", Tipo: Pessoa Física");
+                PessoaFisica pf = (PessoaFisica) p;
+                System.out.println("Nome: " + pf.getNome() + ", Idade: " + pf.getIdade() + ", Tipo: Pessoa Física, CPF: " + pf.getCpf());
             } else if (p instanceof PessoaJuridica) {
-                System.out.println("Nome:" + p.getNome() + ", Idade:" + p.getIdade() + ", Tipo: Pessoa Jurídica, CNPJ:" +
-                        ((PessoaJuridica) p).getCnpj());
-            } else {
-                System.out.println("Nome:" + p.getNome() + ", Idade:" + p.getIdade());
+                PessoaJuridica pj = (PessoaJuridica) p;
+                System.out.println("Nome: " + pj.getNome() + ", Idade: " + pj.getIdade() + ", Tipo: Pessoa Jurídica, CNPJ: " + pj.getCnpj());
             }
         }
-        }
     }
+}

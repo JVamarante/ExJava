@@ -8,9 +8,4 @@ class PessoaFisica extends Pessoa {
     public void setCpf(String cpf) {
         this.cpf = cpf;
     }
-
-    @Override
-    public String toString() {
-        return "Nome: " + getNome() + ", Idade: " + getIdade() + ", CPF: " + getCpf() + ", Tipo: Pessoa Fisica";
-    }
 }

@@ -1,4 +1,4 @@
-class PessoaJuridica extends Pessoa {
+/*class PessoaJuridica extends Pessoa {
     private String cnpj;
 
     public String getCnpj() {
@@ -12,5 +12,19 @@ class PessoaJuridica extends Pessoa {
     @Override
     public String toString() {
         return "Nome: " + getNome() + ", Idade: " + getIdade() + ", CNPJ: " + getCnpj() + ", Tipo: Pessoa Jurídica";
+    }
+}
+
+
+ */
+class PessoaJuridica extends Pessoa {
+    private String cnpj;
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 }

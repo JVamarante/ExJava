@@ -18,13 +18,12 @@ public class Main {
                 pessoaFisica.setNome(scanner.nextLine());
                 System.out.println("Digite a idade da pessoa física:");
                 pessoaFisica.setIdade(scanner.nextInt());
-                scanner.nextLine();
+                scanner.nextLine(); // Limpar o buffer do scanner
 
                 System.out.println("Digite o CPF da pessoa física:");
                 pessoaFisica.setCpf(scanner.nextLine());
 
-                cp.cadastrarPessoaFisica(pessoaFisica);
-                System.out.println(pessoaFisica.toString());
+                cp.cadastrarPessoa(pessoaFisica);
             } else if (tipoPessoa.equalsIgnoreCase("Jurídica")) {
                 PessoaJuridica pessoaJuridica = new PessoaJuridica();
 
@@ -32,16 +31,15 @@ public class Main {
                 pessoaJuridica.setNome(scanner.nextLine());
                 System.out.println("Digite a idade da pessoa jurídica:");
                 pessoaJuridica.setIdade(scanner.nextInt());
-                scanner.nextLine();
+                scanner.nextLine(); // Limpar o buffer do scanner
 
                 System.out.println("Digite o CNPJ da pessoa jurídica:");
                 pessoaJuridica.setCnpj(scanner.nextLine());
 
-                cp.cadastrarPessoaJuridica(pessoaJuridica);
-                System.out.println(pessoaJuridica.toString());
+                cp.cadastrarPessoa(pessoaJuridica);
             } else {
                 System.out.println("Tipo de pessoa inválido. Por favor, digite 'Física' ou 'Jurídica'.");
-                continue;
+                continue; // Volta para o início do loop
             }
 
             System.out.println("Deseja adicionar outra pessoa? (Sim/Não)");
@@ -51,6 +49,7 @@ public class Main {
             }
         }
 
+        System.out.println("Listagem de Pessoas:");
         cp.listarPolimorficos();
     }
 }
