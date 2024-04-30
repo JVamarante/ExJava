@@ -18,7 +18,7 @@ public class Main {
                 pessoaFisica.setNome(scanner.nextLine());
                 System.out.println("Digite a idade da pessoa física:");
                 pessoaFisica.setIdade(scanner.nextInt());
-                scanner.nextLine(); // Limpar o buffer do scanner
+                scanner.nextLine();
 
                 System.out.println("Digite o CPF da pessoa física:");
                 pessoaFisica.setCpf(scanner.nextLine());
@@ -31,7 +31,7 @@ public class Main {
                 pessoaJuridica.setNome(scanner.nextLine());
                 System.out.println("Digite a idade da pessoa jurídica:");
                 pessoaJuridica.setIdade(scanner.nextInt());
-                scanner.nextLine(); // Limpar o buffer do scanner
+                scanner.nextLine();
 
                 System.out.println("Digite o CNPJ da pessoa jurídica:");
                 pessoaJuridica.setCnpj(scanner.nextLine());
